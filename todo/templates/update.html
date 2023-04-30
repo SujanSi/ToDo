@@ -1,0 +1,8 @@
+<form action="{% url 'update' employee.id %}" method="POST">
+    {% csrf_token %}
+    <label for="name">NAME</label>
+    <input type="text" name="name" value="{{ employee.name }}">
+<label for="description">Description</label>
+    <input type="text" name="description" value="{{ employee.description }}">
+    <button type="submit">save</button>
+</form>
